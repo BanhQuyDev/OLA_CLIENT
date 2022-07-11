@@ -1,0 +1,1 @@
+export const fileUrl = "https://olaproject2022.s3.ap-southeast-1.amazonaws.com/"

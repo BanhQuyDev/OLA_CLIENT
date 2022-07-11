@@ -1,0 +1,22 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import CoreUI styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// Some temp fixes
+@import "fixes";
+
+// If you want to add something do it here
+@import "custom";
+
+@import url('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+
+button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+  }

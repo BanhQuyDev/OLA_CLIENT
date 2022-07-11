@@ -1,0 +1,38 @@
+.MuiTab-wrapper {
+  font-size: 10px;
+}
+
+.contentPanel {
+  /* height: 200px;  */
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+.VContentPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* margin-right: 20px; */
+}
+.HContentPanel {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 20px; */
+}
+
+.buttonReadAll {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 15px;
+  color: #2c2c2c;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}

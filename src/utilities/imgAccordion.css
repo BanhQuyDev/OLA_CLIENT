@@ -1,0 +1,124 @@
+/* @import "compass/css3"; */
+#imgAccordion{
+	 background: white;
+	 display: flex;
+     flex-direction: column;
+     /* height: 70%; */
+}
+#imgAccordion .credits {
+	 text-align: right;
+	 margin-top: 15px;
+}
+#imgAccordion .credits a {
+	 color: #222;
+	 background-color: #f8dc3d;
+	 /* font-family: "Segoe UI", "Ubuntu", monospace;
+	 font-weight: 500; */
+	 text-decoration: none;
+	 padding: 2px 10px;
+	 border-radius: 4px;
+}
+#imgAccordion ul {
+	 list-style: none;
+	 max-width: 1200px;
+	 margin: 0 auto;
+}
+#imgAccordion ul li {
+	 float: left;
+	 width: 16.666%;
+	 height: 400px;
+	 opacity: 0.4;
+	 -moz-transition: all 0.5s ease-in-out;
+	 -ms-transition: all 0.5s ease-in-out;
+	 -webkit-transition: all 0.5s ease-in-out;
+	 transition: all 0.5s ease-in-out;
+}
+#imgAccordion ul li:hover,#imgAccordion ul li:first-child ~ li:last-child {
+	 width: 50%;
+	 opacity: 1;
+	 -moz-transition: all 0.5s ease-in-out;
+	 -ms-transition: all 0.5s ease-in-out;
+	 -webkit-transition: all 0.5s ease-in-out;
+	 transition: all 0.5s ease-in-out;
+}
+#imgAccordion ul li:hover ~ li:last-child {
+	 width: 16.666%;
+	 opacity: 0.4;
+}
+#imgAccordion ul li:nth-child(1) {
+	 background: url("https://dl.dropbox.com/s/mbho5bqfofk6g99/pic.jpg") top center no-repeat;
+}
+#imgAccordion ul li:nth-child(2) {
+	 background: url("https://dl.dropbox.com/s/kioimintl0v9l4d/pic.jpg") top right no-repeat;
+}
+#imgAccordion ul li:nth-child(3) {
+	 background: url("https://dl.dropbox.com/s/7a60gndncwf81x8/pic.jpg") top center no-repeat;
+}
+#imgAccordion ul li:nth-child(4) {
+	 background: url("https://dl.dropbox.com/s/nkwuv9jz8i99309/pic.jpg") top center no-repeat;
+}
+/** Add cool filter efects **/
+#imgAccordion ul li::before {
+	 content: "";
+	 display: block;
+	 width: 0;
+	 height: 100%;
+	 -moz-transition: all 0.5s ease-in-out;
+	 -ms-transition: all 0.5s ease-in-out;
+	 -webkit-transition: all 0.5s ease-in-out;
+	 transition: all 0.5s ease-in-out;
+}
+#imgAccordion ul li:nth-child(1)::before {
+	 background-color: rgba(255, 87, 34, .2);
+}
+#imgAccordion ul li:nth-child(2)::before {
+	 background-color: rgba(76, 175, 80, .25);
+}
+#imgAccordion ul li:nth-child(3)::before {
+	 background-color: rgba(33, 150, 243, .25);
+}
+#imgAccordion ul li:nth-child(4)::before {
+	 background-color: rgba(156, 39, 176, .2);
+}
+#imgAccordion input:checked ~ ul li::before {
+	 width: 100%;
+	 -moz-transition: all 0.5s ease-in-out;
+	 -ms-transition: all 0.5s ease-in-out;
+	 -webkit-transition: all 0.5s ease-in-out;
+	 transition: all 0.5s ease-in-out;
+}
+#imgAccordion input[type="checkbox"] {
+	 width: 555px;
+	 margin: 15px;
+	 font-family: "Segoe UI", "Ubuntu", monospace;
+	 color: white;
+}
+#imgAccordion input[type="checkbox"]::before {
+	 content: "Pure CSS Accordion";
+	 font-size: 1.5em;
+	 position: relative;
+	 top: -10px;
+}
+#imgAccordion input[type="checkbox"]::after {
+	 content: "Filters Enabled";
+	 color: #caa;
+	 position: relative;
+	 top: -10px;
+	 left: 5px;
+}
+/** Layout fixes **/
+#imgAccordion .credits a {
+	 margin-right: calc((100% - 1230px)/2);
+}
+#imgAccordion input[type="checkbox"] {
+	 margin-left: calc((100% - 1160px)/2);
+}
+ @media (max-width: 1240px) {
+    #imgAccordion .credits a {
+		 margin-right: 0px;
+	}
+	#imgAccordion input[type="checkbox"] {
+		 margin-left: 35px;
+	}
+}
+ 
